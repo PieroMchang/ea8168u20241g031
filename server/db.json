@@ -1,0 +1,51 @@
+{
+  "showroom-sections": [
+    {
+      "id": 1,
+      "name": "SUV & Crossover Main Showroom",
+      "vehicleCategory": "vehicle",
+      "maxCapacity": 10
+    },
+    {
+      "id": 2,
+      "name": "Sedan & Hatchback Exhibition Bay",
+      "vehicleCategory": "vehicle",
+      "maxCapacity": 8
+    },
+    {
+      "id": 3,
+      "name": "Commercial & Pick-up Yard",
+      "vehicleCategory": "vehicle",
+      "maxCapacity": 6
+    }
+  ],
+  "vehicle-inventory-items": [
+    {
+      "id": 1,
+      "sectionId": 1,
+      "vehicleCategoryId": "vehicle",
+      "vehicleId": 1,
+      "vehicleName": "Essence Mascara LaMia",
+      "quantity": 3,
+      "registeredAt": "2026-10-12T08:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "sectionId": 1,
+      "vehicleCategoryId": "vehicle",
+      "vehicleId": 2,
+      "vehicleName": "Eyeshadow Palette with Mirror",
+      "quantity": 2,
+      "registeredAt": "2026-10-12T09:15:00.000Z"
+    },
+    {
+      "id": 3,
+      "sectionId": 2,
+      "vehicleCategoryId": "vehicle",
+      "vehicleId": 3,
+      "vehicleName": "Powder Canister",
+      "quantity": 4,
+      "registeredAt": "2026-10-12T10:00:00.000Z"
+    }
+  ]
+}

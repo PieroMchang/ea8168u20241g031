@@ -1,0 +1,7 @@
+{
+  "toolbar": { "title": "Gestión de Showroom Astara" },
+  "sidebar": { "home": "Inicio", "new": "Nuevo Artículo de Inventario" },
+  "home": { "title": "Inicio", "subtitle": "Vehículos Premium y Gestión de Showroom en tu Concesionario.", "collections": "Mis Colecciones de Showroom" },
+  "form": { "title": "Nuevo Artículo de Inventario", "subtitle": "Agrega Vehículos a tu Colección", "section": "Sección del Showroom", "vehicle": "Vehículo", "quantity": "Cantidad", "create": "Crear", "cancel": "Cancelar" },
+  "card": { "total": "Vehículos Totales", "capacity": "Capacidad Disponible", "empty": "Sin Vehículos" }
+}

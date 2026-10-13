@@ -1,0 +1,7 @@
+{
+  "toolbar": { "title": "Astara Showroom Management" },
+  "sidebar": { "home": "Home", "new": "New Vehicle Inventory Item" },
+  "home": { "title": "Home", "subtitle": "Premium Vehicles & Showroom Management Delivered to Your Dealership.", "collections": "My Showroom Collections" },
+  "form": { "title": "New Vehicle Inventory Item", "subtitle": "Add Vehicle Inventory Items to Your Collection", "section": "Showroom Section", "vehicle": "Vehicle", "quantity": "Quantity", "create": "Create", "cancel": "Cancel" },
+  "card": { "total": "Total Vehicles", "capacity": "Available Capacity", "empty": "No Vehicles" }
+}

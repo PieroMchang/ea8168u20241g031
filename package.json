@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@primeuix/themes": "^3.0.1",
+    "@primevue/themes": "^4.5.4",
     "axios": "^1.20.0",
     "pinia": "^4.0.3",
     "primeflex": "^4.0.0",
     "primeicons": "^8.0.2",
     "primevue": "^5.0.2",
     "vue": "^3.5.42",
+    "vue-i18n": "^11.4.14",
     "vue-router": "^5.4.0"
   },
   "devDependencies": {

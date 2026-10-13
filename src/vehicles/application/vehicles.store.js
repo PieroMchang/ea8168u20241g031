@@ -1,9 +1,12 @@
 /**
- * @summary Vehicles External API Store
+ * @summary Vehicles External API Store with Assembler
  * @author Piero Francisco Montes Chang
  */
 import { defineStore } from 'pinia';
-import axios from 'axios';
+import { VehiclesApi } from '../infrastructure/vehicles.api.js';
+import { VehicleAssembler } from '../infrastructure/vehicle.assembler.js';
+
+const api = new VehiclesApi();
 
 export const useVehiclesStore = defineStore('vehicles', {
     state: () => ({
@@ -11,8 +14,8 @@ export const useVehiclesStore = defineStore('vehicles', {
     }),
     actions: {
         async fetchVehicles() {
-            const res = await axios.get(`${import.meta.env.VITE_EXTERNAL_API_BASE_URL}${import.meta.env.VITE_VEHICLES_ENDPOINT_PATH}`);
-            this.externalVehicles = res.data.products;
+            const res = await api.getVehicles();
+            this.externalVehicles = VehicleAssembler.toEntitiesFromResponse(res);
         }
     }
 });

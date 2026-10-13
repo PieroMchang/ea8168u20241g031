@@ -1,9 +1,13 @@
 /**
- * @summary Showroom State Management
+ * @summary Showroom State Management with API and Assembler
  * @author Piero Francisco Montes Chang
  */
 import { defineStore } from 'pinia';
-import axios from 'axios';
+import { ShowroomApi } from '../infrastructure/showroom.api.js';
+import { ShowroomSectionAssembler } from '../infrastructure/showroom-section.assembler.js';
+import { VehicleInventoryItemAssembler } from '../infrastructure/vehicle-inventory-item.assembler.js';
+
+const api = new ShowroomApi();
 
 export const useShowroomStore = defineStore('showroom', {
     state: () => ({
@@ -26,15 +30,15 @@ export const useShowroomStore = defineStore('showroom', {
     },
     actions: {
         async fetchSections() {
-            const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}${import.meta.env.VITE_SHOWROOM_SECTIONS_ENDPOINT_PATH}`);
-            this.sections = res.data;
+            const res = await api.getSections();
+            this.sections = ShowroomSectionAssembler.toEntitiesFromResponse(res);
         },
         async fetchItems() {
-            const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}${import.meta.env.VITE_VEHICLE_INVENTORY_ITEMS_ENDPOINT_PATH}`);
-            this.items = res.data;
+            const res = await api.getItems();
+            this.items = VehicleInventoryItemAssembler.toEntitiesFromResponse(res);
         },
         async createItem(itemData) {
-            await axios.post(`${import.meta.env.VITE_API_BASE_URL}${import.meta.env.VITE_VEHICLE_INVENTORY_ITEMS_ENDPOINT_PATH}`, itemData);
+            await api.createItem(itemData);
             await this.fetchItems();
         }
     }
